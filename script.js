@@ -1,13 +1,11 @@
-const post = { id: 4, title: '初めての投稿' };
-const comments = [
-  { postId: 4, content: 'いい記事ですね！' },
-  { postId: 3, content: '勉強になりました' },
-  { postId: 4, content: 'なるほど' },
+const users = [
+  { name: '太郎' },
+  { name: '次郎' },
+  { name: '三郎' }
 ];
 
-function commentsForPost(post, comments) {
-  return comments.filter(function (comment) {
-    return comment.postId === post.id;
-  });
-};
-console.log(commentsForPost(post,comments));
+var user;
+
+users.find(function (user) {
+  return user.name === '次郎';
+});
