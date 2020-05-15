@@ -1,10 +1,17 @@
-var cars = [
-  { type: '軽自動車', price: '安い' },
-  { type: '高級車', price: '高い' },
+const products = [
+{name:'きゅうり', type:'野菜'},
+{name:'バナナ', type:'フルーツ'},
+{name:'セロリ', type:'野菜'},
+{name:'オレンジ', type:'フルーツ'},
 ];
 
-var prices = cars.map(function (car) {
-  return car.price;
-});
+const filteredProducts = [];
+for (var i = 0; i < products.length; i++){
+  if (products[i].type === 'フルーツ') {
+    filteredProducts.push(products[i]);
+  }
+}
 
-console.log(prices);
+products.filter(function (product) {
+  return product.type === 'フルーツ';
+});
