@@ -1,11 +1,10 @@
-const numbers = [1, 2, 3];
-const doubledNumbers = [];
-// for (var i = 0; i < numbers.length; i++){
-//   doubledNumbers.push(numbers[i] * 2);
-// };
+var cars = [
+  { type: '軽自動車', price: '安い' },
+  { type: '高級車', price: '高い' },
+];
 
-const doubled = numbers.map(function (number) {
-  return number*2
-})
-console.log(doubled);
-console.log(doubledNumbers);
+var prices = cars.map(function (car) {
+  return car.price;
+});
+
+console.log(prices);
