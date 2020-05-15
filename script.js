@@ -1,11 +1,14 @@
-const users = [
-  { name: '太郎' },
-  { name: '次郎' },
-  { name: '三郎' }
+const posts = [
+  { id: 1, title: '古い橋' },
+  { id: 2, title: '新しい投稿' },
 ];
 
-var user;
+const comment = { postId: 2, content: 'イイね！' };
 
-users.find(function (user) {
-  return user.name === '次郎';
-});
+function postForComment(posts, comment) {
+  return posts.find(function (post) {
+    return post.id === comment.postId;
+  });
+}
+
+console.log(postForComment(posts, comment));
