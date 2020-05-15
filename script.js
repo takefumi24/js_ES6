@@ -1,16 +1,29 @@
-const computers = [
-  {name:"Apple", ram:24},
-  {name:"Compaq", ram:4},
-  {name:"Acer", ram:32}
+function Field(value) {
+  this.value = value;
+}
+
+Field.prototype.validate = function () {
+  return this.value.length > 0;
+}
+
+Field.prototype.validate = function () {
+  return this.value.length > 0;
+}
+const username = new Field('my_username');
+const password = new Field('my_password');
+const birthday = new Field('2010/10/10');
+
+const fields = [
+  username,
+  password
 ];
 
-// 16GB ramが必要なソフト
-// 全て動かせるフラグ
-// どれかでは動かせるフラグ
-computers.every(function (computer) {
-  return computer.ram >= 16
+const formIsValid = fields.every(function (field) {
+  return field.validate();
 });
 
-computers.some(function (computer) {
-  return computer.ram >= 16
-});
+if (formIsValid) {
+  // サーバーにリクエストを投げる
+} else {
+  // エラー表示をする
+}
