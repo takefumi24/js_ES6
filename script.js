@@ -1,7 +1,12 @@
-const numbers = [10, 20, 30];
-const sum = 0;
+const primaryColors = [
+  { color: 'red' },
+  { color: 'yellow' },
+  { color: 'blue' }
+];
 
-const addNumber = numbers.reduce(function (sum,number) {
-  return sum + number;
-},10)
-console.log(addNumber);
+// ['red','yellow', 'blue']の配列を作る(mapメソッド以外)
+reduceMe = primaryColors.reduce(function (previous, primaryColor) {
+  previous.push(primaryColor.color);
+  return previous
+},[]);
+console.log(reduceMe);
