@@ -1,21 +1,10 @@
-const points = [
-  [4,5],
-  [10,3],
-  [40,0]
-];
+const Member = function (firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+};
 
-
-const re = points.map(([x, y]) => {
-  return { x, y };
-});
-
-console.log(re);
-
-
-
-// 最終的にオブジェクトとして管理したい
-// [
-//   {x:4,y:5},
-//   {x:10,y:3},
-//   {x:40,y:0},
-// ]
+const mem = new Member('邦彦', '山田');
+mem.getName = function () {
+  return `${this.lastName} ${this.firstName}`;
+}
+console.log(mem.getName());
