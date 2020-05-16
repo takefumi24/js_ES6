@@ -1,10 +1,8 @@
-// ((((()))))の均衡が取れていることを証明するコードを記載してみる
-function balancedParens(string) {
-  return !string.split('').reduce(function (previous, char) {
-    if (previous < 0) { return previous; }
-    if (char === '(') { return previous + 1; }
-    if (char === ')') { return previous - 1; }
-  }, 0);
-};
+// アロー関数を使ってリファクタリングしてみる
+const numbers = [1, 2, 3];
 
-console.log(balancedParens('()'));
+numbers.map(function (number) {
+  return 2 * number;
+});
+
+numbers.map(number => 2 * number);
