@@ -1,13 +1,11 @@
-var expense = {
-  type: '交際費',
-  amount: '4500 Jpy'
+const savedFile = {
+  extension: 'jpg',
+  name: 'profile',
+  size: 14040
 };
 
-// var type = expense.type;
-// var amount = expense.amount;
+function fileSummary({name,extension,size},{username}) {
+  return `${username}:${name}.${extension}の容量は${size}です。`
+}
 
-//ES6
-
-const { type, amount } = expense;
-console.log(type);
-console.log(amount);
+console.log(fileSummary(savedFile,{username: 'ken' }));
