@@ -1,12 +1,10 @@
-const primaryColors = [
-  { color: 'red' },
-  { color: 'yellow' },
-  { color: 'blue' }
-];
+// ((((()))))の均衡が取れていることを証明するコードを記載してみる
+function balancedParens(string) {
+  return !string.split('').reduce(function (previous, char) {
+    if (previous < 0) { return previous; }
+    if (char === '(') { return previous + 1; }
+    if (char === ')') { return previous - 1; }
+  }, 0);
+};
 
-// ['red','yellow', 'blue']の配列を作る(mapメソッド以外)
-reduceMe = primaryColors.reduce(function (previous, primaryColor) {
-  previous.push(primaryColor.color);
-  return previous
-},[]);
-console.log(reduceMe);
+console.log(balancedParens('()'));
