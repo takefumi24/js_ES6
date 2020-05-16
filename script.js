@@ -1,10 +1,17 @@
-// アロー関数を使ってリファクタリングしてみる
-const team = {
-  members: ['太郎', '花子'],
-  teamName: 'スーパーチーム',
-  teamSummary: function () {
-    return this.members.map((member)=> {
-      return `${member}は${this.teamName}の所属です}`;
-    });
-  }
-};
+function addNumbers(numbers) {
+  return numbers.reduce((sum, number) => {
+    return sum + number
+  },0);
+}
+
+console.log(addNumbers(1, 2, 3, 4, 5));
+
+// 上記をRest演算子にする
+
+function addNumbers(...numbers) {
+  return numbers.reduce((sum, number) => {
+    return sum + number
+  }, 0);
+}
+
+console.log(addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
