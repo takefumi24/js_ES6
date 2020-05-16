@@ -1,17 +1,13 @@
-function addNumbers(numbers) {
-  return numbers.reduce((sum, number) => {
-    return sum + number
-  },0);
-}
+var expense = {
+  type: '交際費',
+  amount: '4500 Jpy'
+};
 
-console.log(addNumbers(1, 2, 3, 4, 5));
+// var type = expense.type;
+// var amount = expense.amount;
 
-// 上記をRest演算子にする
+//ES6
 
-function addNumbers(...numbers) {
-  return numbers.reduce((sum, number) => {
-    return sum + number
-  }, 0);
-}
-
-console.log(addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+const { type, amount } = expense;
+console.log(type);
+console.log(amount);
