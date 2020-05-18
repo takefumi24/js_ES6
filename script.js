@@ -1,43 +1,6 @@
-const testingTeam = {
-  lead:'典子',
-  tester: '隆',
-  [Symbol.iterator]: function* () {
-    yield this.lead;
-    yield this.tester;
-  }
-
+async function callApi() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users = await res.json();
+  console.log(users);
 }
-
-const engineeringTeam = {
-  testingTeam,
-  size: 3,
-  department: '開発部',
-  lead: '太郎',
-  manager: 'ゆり',
-  engineer: '次郎',
-  [Symbol.iterator]: function* () {
-    yield this.lead;
-    yield this.manager;
-    yield this.engineer;
-    yield* this.testingTeam;
-
-  }
-};
-
-// function* TeamIterator(team) {
-//   yield team.lead;
-//   yield team.manager;
-//   yield team.engineer;
-//   yield* team.testingTeam;
-// };
-
-// function* TestingTeamIterator(team) {
-//   yield team.lead;
-//   yield team.tester;
-// }
-
-const names = []
-for (let name of engineeringTeam) {
-  names.push(name);
-}
-console.log(names);
+callApi();
