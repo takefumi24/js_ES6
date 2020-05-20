@@ -17,7 +17,16 @@ let youtuber = {
   uploadVideo(){}
 }
 
-// youtuberのdanの「name」を取得
-youtuber.list.business.youtuber[0].name;
-// youtuberのplanメソッドを取得
-youtuber.plan();
+// windowオブジェクトの中にあるconsoleプロパティでlogメソッド
+window.console.log();
+
+// window.は省略可能
+console.log();
+document.getElementById();
+
+//大きさを確認できる
+window.screen.width;
+window.screen.height;
+
+//ブラウザを更新
+window.location.reload
