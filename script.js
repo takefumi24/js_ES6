@@ -1,10 +1,11 @@
-//コールバック関数に匿名関数
 function confirmed(fn) {
-  if (window.confirm("実行しますか？")) {
-    fn();
-  }
+  const input = window.prompt("実行しますか？");
+  fn(input);
 }
 
-confirmed(function() {
-  console.log("フォローを外しました");
+// 匿名関数が引数を持った関数になる
+confirmed(function (input) {
+  if (input === "実行") {
+    console.log("リポジトリを削除");
+  }
 });
