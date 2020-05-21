@@ -1,16 +1,15 @@
-function isTweetable(text) {
-  return text.length <= 10;
-}
-
-//関数式,匿名関数
-const isTweetable = function (text) {
-  return text.length <= 10;
+function unfollow() {
+  console.log("フォローを外しました");
+};
+function cancelTweet() {
+  console.log("フォローを外しました");
 };
 
-function alertTweetable(text) {
-  if (islessThan(text)) {
-    alert("you can tweet");
+//コールバック関数
+function confirmed(fn) {
+  if (window.confirm("実行しますか？")) {
+    fn();
   }
 }
 
-alertTweetable("foo");
+confirmed(unfollow);
