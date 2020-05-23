@@ -1,12 +1,29 @@
-'use strict';
+"use strict";
 
-const score = 82;
+const signal = "blue";
 
-// if (score >= 80) {
-//   console.log('Great!');
-// } else {
-//   console.log('OK...');
+// if (signal === 'red') {
+//   console.log('Stop!');
+// } else if (signal === 'yellow') {
+//   console.log('Caution!');
+// } else if (signal === 'blue'){
+//   console.log('Go!');
 // }
 
-//上記のものを条件演算子に書き換える
-score >= 80 ? console.log('Great') : console.log('OK...');
+//上記if文をswitch文に書き換えなさい。
+
+switch (signal) {
+  case "red":
+    console.log("Stop!");
+    break;
+  case "yellow":
+    console.log("Caution!");
+    break;
+  case "blue":
+  case "green":
+    console.log("Go!");
+    break;
+  default:
+    console.log("Wrong signal!");
+    break;
+}
