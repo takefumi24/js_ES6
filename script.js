@@ -1,15 +1,21 @@
 'use strict';
 
 {
-  const numbers = [1, 4, 7, 8, 10];
+  const otherProps = {
+    r: 4,
+    color: 'red',
+  };
 
-  const evenNumbers = numbers.filter((number) => {
-    if (number % 2 === 0) {
-      return true;
-    } else {
-      return false;
-    }
-  });
+  const point = {
+    x: 100,
+    y: 180,
+    ...otherProps,
+  };
 
-  console.log(evenNumbers);
+  console.log(point);
+
+  const { x, r, ...others } = point;
+  console.log(x);
+  console.log(r);
+  console.log(others);
 }
