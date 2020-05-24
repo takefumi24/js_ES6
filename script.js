@@ -1,21 +1,15 @@
 'use strict';
 
 {
-  const otherProps = {
-    r: 4,
-    color: 'red',
-  };
-
   const point = {
     x: 100,
     y: 180,
-    ...otherProps,
+
   };
+  const keys = Object.keys(point);
+  keys.forEach(key => {
+    console.log(`Key:${key} Value:${point[key]}`);//文字列として扱っているので、point.keyではなく、point[key]となる
+  });
 
-  console.log(point);
 
-  const { x, r, ...others } = point;
-  console.log(x);
-  console.log(r);
-  console.log(others);
 }
