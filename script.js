@@ -1,17 +1,15 @@
 'use strict';
 
 {
-  const scores = [80, 90, 40, 70];
-  //値を別々の定数にしたい
-  // const [a, b, c, d] = scores;
-  // console.log(a);
-  // console.log(b);
-  // console.log(c);
-  // console.log(d);
+  const numbers = [1, 4, 7, 8, 10];
 
-  const [a, b, ...others] = scores;
-    console.log(a);
-    console.log(b);
-    console.log(others);
+  const evenNumbers = numbers.filter((number) => {
+    if (number % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  });
 
+  console.log(evenNumbers);
 }
