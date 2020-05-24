@@ -1,29 +1,17 @@
-"use strict";
+'use strict';
 
-const signal = "blue";
+{
+  const scores = [80, 90, 40, 70];
+  //値を別々の定数にしたい
+  // const [a, b, c, d] = scores;
+  // console.log(a);
+  // console.log(b);
+  // console.log(c);
+  // console.log(d);
 
-// if (signal === 'red') {
-//   console.log('Stop!');
-// } else if (signal === 'yellow') {
-//   console.log('Caution!');
-// } else if (signal === 'blue'){
-//   console.log('Go!');
-// }
+  const [a, b, ...others] = scores;
+    console.log(a);
+    console.log(b);
+    console.log(others);
 
-//上記if文をswitch文に書き換えなさい。
-
-switch (signal) {
-  case "red":
-    console.log("Stop!");
-    break;
-  case "yellow":
-    console.log("Caution!");
-    break;
-  case "blue":
-  case "green":
-    console.log("Go!");
-    break;
-  default:
-    console.log("Wrong signal!");
-    break;
 }
