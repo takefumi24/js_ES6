@@ -1,11 +1,10 @@
 "use strict";
 
-// 分割代入とレスト構文
+//下記配列を番号をつけて順番に呼び出しなさい。
 {
-  const scores = [80, 90, 40, 70];
-// レスト構文
-  const [a, b, ...others] = scores;
-  console.log(a);
-  console.log(b);
-  console.log(others);
+  const scores = [80, 60, 50, 70];
+
+  scores.forEach((score,index)=> {
+    console.log(`Score${index+1}:${score}`);
+  })
 }
