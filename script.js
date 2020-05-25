@@ -1,8 +1,20 @@
 "use strict";
 
-//下記配列の中から偶数のみを呼び出しなさい。
+// xとrは定数とし、残りのものはオブジェクトとして扱えるようにして下さい。
 {
-  const numbers = [80, 133, 65, 99, 36, 187];
-  const evenNumbers = numbers.filter(number=> number % 2 === 0);
-  console.log(evenNumbers);
+  const otherProps = {
+    r: 4,
+    color: "red",
+  };
+
+  const point = {
+    x: 100,
+    y: 180,
+    ...otherProps,
+  };
+  // 解答
+  const { x, r, ...others } = point;
+  console.log(x);
+  console.log(r);
+  console.log(others);
 }
