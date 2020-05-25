@@ -1,10 +1,8 @@
 "use strict";
 
-//下記配列を番号をつけて順番に呼び出しなさい。
+//下記配列の中から偶数のみを呼び出しなさい。
 {
-  const scores = [80, 60, 50, 70];
-
-  scores.forEach((score,index)=> {
-    console.log(`Score${index+1}:${score}`);
-  })
+  const numbers = [80, 133, 65, 99, 36, 187];
+  const evenNumbers = numbers.filter(number=> number % 2 === 0);
+  console.log(evenNumbers);
 }
