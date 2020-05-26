@@ -1,30 +1,12 @@
 "use strict";
 
 {
-  const scores = [10, 3, 9];
-  //数値の合計と平均を求める
-  let sum = 0;
-  scores.forEach(score => {
-    sum += score;
-  });
+  // 月日を表示
+  // const d = new Date;
+  // console.log(`${d.getMonth() + 1}月 ${d.getDate()}日`);
 
-  const avg = sum / scores.length;
-
-  console.log(sum);
-  console.log(avg);
-
-  // 小数点以下を切り捨てる
-  console.log(Math.floor(avg));
-
-  // 小数点以下を切り上げる
-  console.log(Math.ceil(avg));
-
-  //四捨五入
-  console.log(Math.round(avg));
-  // 小数点第３位まで
-  console.log(avg.toFixed(3));
-
-  // 0以上１未満のランダム数値
-  console.log(Math.random());
-
+  const da = new Date(2020,4);
+  da.setHours(10, 20, 30);
+  da.setDate(31);
+  console.log(da);
 }
