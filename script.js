@@ -1,20 +1,23 @@
 "use strict";
 
-// xとrは定数とし、残りのものはオブジェクトとして扱えるようにして下さい。
 {
-  const otherProps = {
-    r: 4,
-    color: "red",
-  };
-
   const point = {
     x: 100,
-    y: 180,
-    ...otherProps,
-  };
-  // 解答
-  const { x, r, ...others } = point;
-  console.log(x);
-  console.log(r);
-  console.log(others);
+    y:180,
+  }
+
+  //Object.keys();
+  const keys = Object.keys(point);
+  keys.forEach(key => {
+    console.log(`Key:${key} Value: ${point[key]}`);
+  });
+
+  //配列とオブジェクトの組み合わせ
+  const points = [
+    { x:30,y:20},
+    { x:30,y:50},
+    { x:30,y:90},
+  ]
+
+  points[1].y
 }
