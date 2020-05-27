@@ -4,11 +4,12 @@
   let i = 0;
   function showTime() {
     console.log(new Date());
+    const timeoutID = setTimeout(showTime, 1000);
     i++;
     if (i > 2) {
-      clearInterval(intervalId);
+      clearTimeout(timeoutID);
     }
   }
-  //1秒ごとに繰り返される
-  const intervalId = setInterval(showTime,1000);
+
+  showTime();
 }
