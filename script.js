@@ -1,15 +1,16 @@
 "use strict";
 
 {
-  let i = 0;
-  function showTime() {
-    console.log(new Date());
-    const timeoutID = setTimeout(showTime, 1000);
-    i++;
-    if (i > 2) {
-      clearTimeout(timeoutID);
-    }
-  }
+  // const name = "ohba";
+  const name = 5;
 
-  showTime();
+  // 例外処理
+  try {
+    // 文字列を大文字に変換　
+    console.log(name.toUpperCase());
+  } catch (e) {
+    console.log(e);
+  }
+  console.log('Finish');
+
 }
