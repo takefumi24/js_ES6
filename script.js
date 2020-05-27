@@ -1,16 +1,20 @@
 "use strict";
 
 {
-  // const name = "ohba";
-  const name = 5;
+  const posts = [
+    {
+      text: "おはようございます",
+      likecount: 0,
+    },
+    {
+      text: "今日も１日積み上げます！！",
+      likeCount: 0,
+    },
+  ];
 
-  // 例外処理
-  try {
-    // 文字列を大文字に変換　
-    console.log(name.toUpperCase());
-  } catch (e) {
-    console.log(e);
+  function show(post) {
+    console.log(`${post.text}-${post.likecount}イイね`);
   }
-  console.log('Finish');
+  show(posts[0]);
 
 }
