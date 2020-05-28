@@ -9,10 +9,12 @@
     const users = await res.json();
 
     //DOM操作
-
-    const list = document.createElement('li');
-    list.innerText = 'foo';
-    lists.appendChild(list);
+    users.forEach((user) => {
+      // li要素を追加
+      const list = document.createElement('li');
+      list.innerText = user.name;
+      lists.appendChild(list);
+    });
   });
 
 }
