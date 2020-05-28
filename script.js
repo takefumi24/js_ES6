@@ -15,6 +15,11 @@
       this.likeCount++;
       this.show();
     }
+
+  //静的メソッド
+    static showInfo() {
+      console.log('thisは使えません！');
+    }
   }
 
   const posts = [
@@ -22,8 +27,8 @@
     new Post("今日も１日積み上げます！！"),
   ];
 
-  posts[0].like();
+  // posts[0].like();
   // posts[0].show();
   // posts[1].show();
-
+  Post.showInfo();
 }
