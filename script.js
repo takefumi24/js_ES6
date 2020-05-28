@@ -4,11 +4,16 @@
   class Post{
     constructor(text) {
       this.text = text;
-      this.likecount = 0;
+      this.likeCount = 0;
     }
 
     show() {
-      console.log(`${this.text}-${this.likecount}イイね`);
+      console.log(`${this.text}-${this.likeCount}イイね`);
+    }
+
+    like(){
+      this.likeCount++;
+      this.show();
     }
   }
 
@@ -17,7 +22,8 @@
     new Post("今日も１日積み上げます！！"),
   ];
 
-  posts[0].show();
-  posts[1].show();
+  posts[0].like();
+  // posts[0].show();
+  // posts[1].show();
 
 }
