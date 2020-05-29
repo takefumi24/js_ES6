@@ -1,9 +1,11 @@
 "use strict";
 
 {
+  //DOM
   const button = document.getElementById("addBtn");
   const lists = document.getElementById("lists");
 
+  //関数（メソッド）
   function addList(user) {
     // li要素を追加
     const list = document.createElement("li");
@@ -25,6 +27,7 @@
     users.forEach(addList);
   }
 
+  //イベント
   window.addEventListener("load", listUsers);
   button.addEventListener("click", listUsers);
 }
