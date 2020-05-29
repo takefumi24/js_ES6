@@ -17,4 +17,18 @@
     });
   });
 
+  window.addEventListener("load", async () => {
+    //データのやりとり
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const users = await res.json();
+
+    //DOM操作
+    users.forEach((user) => {
+      // li要素を追加
+      const list = document.createElement("li");
+      list.innerText = user.name;
+      lists.appendChild(list);
+    });
+  });
+
 }
