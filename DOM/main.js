@@ -3,10 +3,7 @@
 {
   document.querySelector('button').addEventListener('click', () => {
     const targetNode = document.getElementById('target')
-    targetNode.textContent = 'Changed!';
-    targetNode.tzitle = 'This is title!';
-    targetNode.style.color = 'red';
-    targetNode.style.backgroundColor = 'skyblue';
-
+    //classは予約語であるため、クラス属性については例外的に使えない
+    targetNode.className = 'my-color my-border'
   })
 }
