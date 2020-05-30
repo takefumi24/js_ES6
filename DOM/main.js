@@ -3,7 +3,11 @@
 {
   document.querySelector('button').addEventListener('click', () => {
     const targetNode = document.getElementById('target')
-    //classは予約語であるため、クラス属性については例外的に使えない
-    targetNode.className = 'my-color my-border'
-  })
+    //クラス属性の追加や削除
+    if (targetNode.classList.contains('my-color') === true) {
+      targetNode.classList.remove('my-color');
+    } else {
+      targetNode.classList.add('my-color');
+    }
+  });
 }
