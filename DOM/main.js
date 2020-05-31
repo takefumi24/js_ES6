@@ -5,7 +5,8 @@
     console.log('ダブルクリックしたよ');
   });
 
-  document.addEventListener('mousemove', () => {
-    console.log('マウスが動く');
-  })
+
+  document.addEventListener('keydown', e => {
+    console.log(e.key);
+  } )
 }
