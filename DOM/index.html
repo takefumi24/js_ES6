@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <title>DOM Special</title>
+  <style>
+    li {
+      cursor: pointer;
+    }
+
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
 </head>
+
 <body>
-  <form>
-    <input type="text">
-    <button>Post</button>
-  </form>
+  <ul>
+    <!-- e.currentTarget -->
+    <li>Todo</li>
+    <li>Todo</li> <!-- e.target -->
+    <li>Todo</li>
+  </ul>
+
+
+
   <script src="main.js"></script>
 </body>
 </html>
