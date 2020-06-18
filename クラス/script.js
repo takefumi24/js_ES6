@@ -1,43 +1,25 @@
-class Animal {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+//ES6のクラス
+class Car{
+  constructor({title}) {
+    this.title =title;
   }
-
-  greet() {
-    console.log("こんにちは");
-  }
-
-  info() {
-    this.greet();
-    console.log(`名前は${this.name}です`);
-    console.log(`${this.age}歳です`);
+  drive() {
+    return 'ウィーン';
   }
 }
 
-class Dog extends Animal {
-  // constructorを追加してください
-  constructor(name, age, breed) {
-    super(name, age);
-    this.breed = breed;
+class Toyota extends Car{
+  constructor(options) {
+    super(options);//Car.constructor
+    this.color = options.color;
   }
-
-  info() {
-    this.greet();
-    console.log(`名前は${this.name}です`);
-    // 「犬種は〇〇です」と出力してください
-    console.log(`犬種は${this.breed}です`);
-
-    console.log(`${this.age}歳です`);
-    const humanAge = this.getHumanAge();
-    console.log(`人間年齢で${humanAge}歳です`);
-  }
-
-  getHumanAge() {
-    return this.age * 7;
+  honk() {
+    return 'ブブー！！'
   }
 }
 
-// 3つ目の引数に「"チワワ"」を渡してください
-const dog = new Dog("レオ", 4, "チワワ");
-dog.info();
+const toyota = new Toyota({color:'red',title:'アクア'});
+console.log('"Debug": toyota', toyota);
+toyota.honk();
+console.log(toyota.honk());
+console.log(toyota.drive());
