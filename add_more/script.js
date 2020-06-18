@@ -1,33 +1,21 @@
 "use strict";
 
 {
-  //DOM
-  const button = document.getElementById("addBtn");
-  const lists = document.getElementById("lists");
-
-  //関数（メソッド）
-  function addList(user) {
-    // li要素を追加
-    const list = document.createElement("li");
-    list.innerText = user.name;
-    lists.appendChild(list);
+  //高階関数arrayWalkを定義
+  function arryWalk(data, f) {
+    for (var key in data) {
+      f(data[key], key);
+    }
   }
 
+  //結果値を格納するためのグローバル変数
+  var result = 0;
 
-  async function getUsers() {
-    //データのやりとり
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
-    const users = await res.json();
-    return users;
+  function sumElement(value, key) {
+    result += value;
   }
 
-
-  async function listUsers() {
-    const users = await getUsers();
-    users.forEach(addList);
-  }
-
-  //イベント
-  window.addEventListener("load", listUsers);
-  button.addEventListener("click", listUsers);
+  var ary = [1, 2, 4, 8, 16];
+  arryWalk(ary, sumElement);
+  console.log('合計値:' + result);
 }
